@@ -1,6 +1,9 @@
-let shooters = document.querySelectorAll(".shooter")
+	let shooters = document.querySelectorAll(".shooter")
 	let zombies = document.querySelectorAll(".zombies")
 	let scores = document.querySelector(".score")
+	let button1 = document.querySelector(".button1")
+	let button2 = document.querySelector(".button2")
+	let sun = document.querySelectorAll(".sunflower")
 
 	score = 0
 
@@ -11,6 +14,7 @@ let shooters = document.querySelectorAll(".shooter")
 	let zombie3left = 78;
 	let zombie4left = 78;
 	let zombie5left = 78;
+
 
 	zombies[0].onclick = function(){
 		zombie1left = zombie1left - 6;
@@ -80,5 +84,15 @@ let shooters = document.querySelectorAll(".shooter")
 				alert("Ты съел эти растения! Победа 😏")
 				zombies.style.display = "none"
 			}
+		}
+	}
+	button1.onclick = function(){
+		for(let i=0; i<5; i=i+1){
+			shooters[i].src = "peashooter2.png"
+		}
+	}
+	button2.onclick = function(){
+		for(let i=0; i<5; i=i+1){
+			sun[i].style.display = "flex"
 		}
 	}
